@@ -8,9 +8,9 @@ phases:
     commands:
       - echo "Installing dependencies"
       - npm install
-      - echo "Zipping app for deployment"
-      - zip -r app.zip .
 
 artifacts:
   files:
-    - app.zip
+    - appspec.yml
+    - scripts/**         # your lifecycle scripts (install.sh, start_server.sh, etc.)
+    - **/*    
